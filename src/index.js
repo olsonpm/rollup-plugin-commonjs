@@ -148,7 +148,7 @@ export default function commonjs ( options = {} ) {
 
 				return commonjsModules.has( actualId ) ?
 					`import { __moduleExports } from ${JSON.stringify( actualId )}; export default __moduleExports;` :
-					`import * as ${name} from ${JSON.stringify( actualId )}; export default ( ${name} && ${name}['default'] ) || ${name};`;
+					`import * as ${name} from ${JSON.stringify( actualId )}; export default ( ${name} && ${name}['def' + 'ault'] ) || ${name};`;
 			}
 		},
 
